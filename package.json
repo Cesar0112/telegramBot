@@ -1,0 +1,28 @@
+{
+  "name": "telegram_bot",
+  "version": "1.0.0",
+  "description": "Esta es la prueba de creación de un bot de telegram intentando modificar y mejorar el clon de ShopFather.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cesar0112/telegramBot.git"
+  },
+  "keywords": [
+    "ShopFather",
+    "Bot",
+    "Telegram"
+  ],
+  "author": "César Fernández García",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cesar0112/telegramBot/issues"
+  },
+  "homepage": "https://github.com/Cesar0112/telegramBot#readme",
+  "dependencies": {
+    "telebot": "^1.4.1"
+  }
+}
