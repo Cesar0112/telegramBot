@@ -11,6 +11,7 @@ exports.bot = bot; //<-- exporto el bot para poder ser usado por otros archivos
 const { start } = require("./comands/start");
 const { menu } = require("./comands/menu");
 const { subscribe } = require("./comands/subscribe");
+const { fast_food } = require("./comands/fast_food");
 
 // Manejar el comando de subscripcion
 start();
