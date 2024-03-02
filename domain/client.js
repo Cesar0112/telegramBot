@@ -1,5 +1,7 @@
-const User = require("./user");
-const Product = require("./product");
+const { User } = require("./user");
+const { Product } = require("./product");
+const { ShoppingCart } = require("./shoppingCart");
+const { validateCard } = require("../utils/validations");
 /**
  * @class Client
  * @author César
@@ -8,18 +10,14 @@ const Product = require("./product");
  * @param shoppingCart Lista de objetos donde la clave es el nombre del tipo de producto
  */
 class Client extends User {
-  constructor(id, username, fullname, cardNumber, shoppingCart = {}) {
+  constructor(id, username, fullname, cardNumber, shoppingCart = ShoppingCart) {
     super(id, username, fullname);
     this.cardNumber = cardNumber;
     this.shoppingCart = shoppingCart;
   }
-  /**
-   * Funcion que permite comprar los productos que tiene a su cuenta
-   * ❌ Falta por implementar esta funcionalidad
-   */
-  buy() {}
+
   /** Funcion que permite agregar una lista de productos o un producto a la cuenta del cliente */
-  add(carrito = {}) {
+  addToShoppingCart(carrito = ShoppingCart) {
     for (const product in carrito) {
       // Si no está dentro dentro del carrito agregalo con cantd 1
       if (!product in this.shoppingCart) {
@@ -29,12 +27,18 @@ class Client extends User {
       }
     }
   }
-  /** @description Esta funcion lo que hace es que va a hacer una petición de pago a la API Rest
-   *
+  /**
+   * Funcion que permite comprar los productos que tiene a su cuenta
+   * @description Esta funcion lo que hace es que va a hacer una petición de pago a la API Rest
+   * ❌ Falta por implementar esta funcionalidad
+   * @param {String} [cardNumber=this.cardNumber]
    */
-  pay() {
+  payProducts(cardNumber = this.cardNumber) {
     let IsPayed = false;
+    let IsValid = validateCard(cardNumber);
     //   Aqui se hace la peticion a la API Rest
+    if (IsValid) {
+    }
     return IsPayed;
   }
 }
