@@ -9,11 +9,6 @@ function menu() {
         // Manda a ejecutar la compra rápida
         // ❌ Falta por implementar esta funcionalidad
         bot.inlineButton("Compra rápida", { callback: "/fast_food" }),
-      ],
-      [
-        // Second row with regular command button
-        // No ejecuta un comando pero si manda texto de callback
-        // bot.inlineButton("Regular data button", { callback: "hello" }),
         //Boton que permite encargar la compra a domicilio
         // ❌ Falta por implementar esta funcionalidad
         bot.inlineButton("Encargo a domicilio", { callback: "/house" }),
@@ -23,12 +18,11 @@ function menu() {
         // Boton de ayuda muestra un mensaje explicando como comprar
         // ❌ Falta por implementar esta funcionalidad
         bot.inlineButton("Ayuda para comprar", { callback: "/help_compra" }),
-      ],
-      [
         // boton que vuelve al inicio
         // ✔️ Listo ya el inicio
         bot.inlineButton("Inicio", { callback: "/start" }),
       ],
+      [],
     ]);
 
     // Send message with keyboard markup

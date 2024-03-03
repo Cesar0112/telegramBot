@@ -1,9 +1,15 @@
 const { TELEGRAM_BOT_TOKEN } = require("./constants");
 const TeleBot = require("telebot");
+const { BUTTONS } = require("./utils/buttons");
 // Instancio el Bot con el token y el plugin para usar comandButtons
 const bot = new TeleBot({
   token: TELEGRAM_BOT_TOKEN,
-  usePlugins: ["commandButton"],
+  usePlugins: ["commandButton", "namedButtons"],
+  pluginConfig: {
+    namedButtons: {
+      buttons: BUTTONS,
+    },
+  },
 });
 exports.bot = bot; //<-- exporto el bot para poder ser usado por otros archivos
 
