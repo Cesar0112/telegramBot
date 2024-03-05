@@ -1,4 +1,5 @@
-const BUTTONS = {
+//❌ Falta por implementar los inlineButtons de las categorías insertarlas de manera dinámica
+let BUTTONS = {
   menu: {
     label: "📋 Menú",
     command: "/menu",

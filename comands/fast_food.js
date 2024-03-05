@@ -4,11 +4,9 @@ function fast_food() {
   bot.on(["/fast_food"], (msg) => {
     // Inline keyboard markup
     const replyButtonFast_FoodCommand = bot.inlineKeyboard([
-      [
-        // ❌ Falta por implementar esta funcionalidad
-        // Aqui dentro debe de ir la lista de alimentos que se pueden comprar de manera
-        // rapida
-      ],
+      // ❌ Falta por implementar esta funcionalidad
+      // Aqui dentro debe de ir la lista de categorías rápidas
+      [],
       [
         // boton que vuelve al inicio
         // ✔️ Listo ya el inicio
